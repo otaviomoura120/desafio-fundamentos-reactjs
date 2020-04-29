@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 interface ContainerProps {
   size?: 'small' | 'large';
+  selected?: boolean;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -30,6 +31,18 @@ export const Container = styled.div<ContainerProps>`
         &:hover {
           opacity: 0.6;
         }
+
+        /* ${props =>
+          props.selected &&
+          css`
+            position: absolute;
+            width: 73px;
+            height: 2px;
+            left: 1102px;
+            top: 69px;
+
+            background: #ff872c;
+          `} */
       }
     }
   }
